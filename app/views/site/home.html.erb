@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="navbar-right">
 			<ul class="nav nav-pills">
-		 		<li role="presentation" class="active"><a href="/">Home</a></li>
+		 		<li role="presentation"><a href="/">Home</a></li>
 		  		<li role="presentation"><a href="/about">About</a></li>
 			</ul>
 		</div>
@@ -11,13 +11,19 @@
 </nav>
 
     <!-- Main banner section -->
-    <!-- Todo: Insert form -->
+    <!-- Todo: Style input form -->
+
+    <%= form_tag("/search", method: "post") do %>
+      <%= label_tag(:q, "Enter your address :") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+    <% end %>
     <div class="jumbotron">
       <div class="container">
         <h1>Government, Who? Miami!</h1>
         <p> Find your commissioner and see what that are up to.</p>
         
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">&raquo; Find </a></p>
       </div>
     </div>
 
@@ -29,7 +35,7 @@
       <div class="row">
         <div class="col-md-4">
           <h2>What is a commissioner?</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Paragraph 1</p>
           
         </div>
         <div class="col-md-4">
@@ -38,7 +44,7 @@
           
        </div>
         <div class="col-md-4">
-          <h2>Let you voice be heard</h2>
+          <h2>Let your voice be heard</h2>
           <p>Paragraph 3</p>
           
         </div>
@@ -47,6 +53,7 @@
       <hr>
 
       <!-- Footer   -->
+      <!-- Add contact information -->
       <footer>
         <p>&copy; 2016 </p>
       </footer>

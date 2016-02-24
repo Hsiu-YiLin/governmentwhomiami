@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get '/' => 'site#home'
+  post '/search' => 'site#search'
+  get '/show' => 'site#show'
+
 
   # Prepare routes for commissioner
 
