@@ -1,60 +1,65 @@
 <!-- Navigation bar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">   
-	<div class="container">
-		<div class="navbar-right">
-			<ul class="nav nav-pills">
-		 		<li role="presentation"><a href="/">Home</a></li>
-		  		<li role="presentation"><a href="/about">About</a></li>
-			</ul>
-		</div>
+<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Government, Who? Miami!</a>
+        <div class="nav navbar-right">
+          <ul>
+      		  <li role="presentation"><a href="/">Home</a></li>
+      	    <li role="presentation"><a href="/about">About</a></li>
+      		</ul>
+        </div>
+    </div>
 	</div>
-</nav>
+</nav> -->
 
     <!-- Main banner section -->
-    <!-- Todo: Style input form -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Government, Who? Miami!</h1>
+    <p> Find your commissioner and see what that are up to.</p>
+    <!-- 
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">&raquo; Find </a></p>  -->
+  </div>
+</div>
+    
+<!-- Input Form -->
+<div class ="container">
+  <div>
+    <input id="find-user-area">
+    <a href="#search" id="find-commissioner">Find</a>
+  </div>
+<!-- 
+<form>
+      <input type="text" id="user-commissioner">
+      <button class="js-form-submit" type="submit">SUBMIT</button>
+</form>
+-->
+<!-- 
+<% form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Enter your address :") %>
+  <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+<% end %>
+ -->
+</div>
 
-    <%= form_tag("/search", method: "post") do %>
-      <%= label_tag(:q, "Enter your address :") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search") %>
-    <% end %>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Government, Who? Miami!</h1>
-        <p> Find your commissioner and see what that are up to.</p>
-        
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">&raquo; Find </a></p>
-      </div>
+<!-- Bottom info portion -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>What is a commissioner?</h2>
+      <p>A commissioner is ...</p>
     </div>
 
+    <div class="col-md-4">
+      <h2>Why do you care?</h2>
+      <p>They control ...</p>
+     </div>
 
-
-    <!-- Bottom info portion -->
-    <div class="container">
-      
-      <div class="row">
-        <div class="col-md-4">
-          <h2>What is a commissioner?</h2>
-          <p>Paragraph 1</p>
-          
-        </div>
-        <div class="col-md-4">
-          <h2>Why do you care?</h2>
-          <p>Paragraph 2</p>
-          
-       </div>
-        <div class="col-md-4">
-          <h2>Let your voice be heard</h2>
-          <p>Paragraph 3</p>
-          
-        </div>
-      </div>
-
-      <hr>
-
-      <!-- Footer   -->
-      <!-- Add contact information -->
-      <footer>
-        <p>&copy; 2016 </p>
-      </footer>
-    </div> 
+    <div class="col-md-4">
+      <h2>Let your voice be heard</h2>
+      <p>Don't limit your political involvement to the national level. Be aware of the day to day government in your neighborhood.</p>
+    </div>
+  </div>
+</div>

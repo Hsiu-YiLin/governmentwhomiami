@@ -3,13 +3,4 @@ class SiteController < ApplicationController
 		render :home
 	end
 
-	def search
-
-	end
-
-	def show
-
-		# Facebook API
-		# Twitter API
-	end
 end

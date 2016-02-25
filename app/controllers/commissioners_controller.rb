@@ -1,10 +1,6 @@
 class CommissionersController < ApplicationController
-	def home
-		render :index
-	end
-
-	def commissioner
+	def show
+		@user_commissioner
 		
 	end
-
 end
