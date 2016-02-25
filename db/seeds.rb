@@ -5,3 +5,17 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Commissioner.new([{district_id: 1},{name: ''},{url: ''},{phone: 1234567890},{email:'email@email.com'}])
+Commissioner.new([{district_id: 2},{name: ''},{url: ''},{phone: 1234567890},{email: }])
+Commissioner.new([{district_id: 3},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 4},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 5},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 6},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 7},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 8},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 9},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 10},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 11},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 12},{name: ''},{url: ''},{phone: },{email: }])
+Commissioner.new([{district_id: 13},{name: ''},{url: ''},{phone: },{email: }])
