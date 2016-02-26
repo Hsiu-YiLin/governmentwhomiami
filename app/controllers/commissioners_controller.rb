@@ -1,9 +1,9 @@
 class CommissionersController < ApplicationController
 	def show
-		@user_commissioner=
+		
 	end
 
 	def search
-		redirect_to :show
+		render :show
 	end
 end
