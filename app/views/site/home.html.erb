@@ -1,19 +1,4 @@
-<!-- Navigation bar -->
-<!-- <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Government, Who? Miami!</a>
-        <div class="nav navbar-right">
-          <ul>
-      		  <li role="presentation"><a href="/">Home</a></li>
-      	    <li role="presentation"><a href="/about">About</a></li>
-      		</ul>
-        </div>
-    </div>
-	</div>
-</nav> -->
-
-    <!-- Main banner section -->
+<!-- Main banner section -->
 <div class="jumbotron">
   <div class="container">
     <h1>Government, Who? Miami!</h1>
@@ -22,43 +7,42 @@
     <p><a class="btn btn-primary btn-lg" href="#" role="button">&raquo; Find </a></p>  -->
   </div>
 </div>
-    
-<!-- Input Form -->
+
+<!-- Input form using Javascript
 <div class ="container">
   <div>
     <input id="find-user-area">
     <a href="#search" id="find-commissioner">Find</a>
   </div>
-
-<!-- Form modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Find</button>
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content" id="user-address">
-      Is this your address?
-      
-
-
-      
-    </div>
-  </div>
 </div>
+-->
 
-<!-- 
+<!-- Input form using half Javascript, half Ruby
 <form>
       <input type="text" id="user-commissioner">
       <button class="js-form-submit" type="submit">SUBMIT</button>
 </form>
 -->
-<!-- 
-<% form_tag("/search", method: "get") do %>
-  <%= label_tag(:q, "Enter your address :") %>
-  <%= text_field_tag(:q) %>
-    <%= submit_tag("Search") %>
+
+<!-- Input form using Ruby -->
+<div class="container">
+  <%= form_tag("search", method: "post") do %>
+  <%= label_tag(:user_address, "Enter your address:") %>
+  <%= text_field_tag(:user_address) %>
+  <%= submit_tag("Search") %>
 <% end %>
- -->
 </div>
 
+<!-- Form modal, pops up with candidates address -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Find</button>
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" id="user-address">
+      Is this your address?
+    </div>
+  </div>
+</div>
+ 
 <!-- Bottom info portion -->
 <div class="container">
   <div class="row">
