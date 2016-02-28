@@ -8,30 +8,36 @@
   </div>
 </div>
 
-<!-- Input form using Javascript
-<div class ="container">
+<!--  Input form using Javascript
+
   <div>
     <input id="find-user-area">
-    <a href="#search" id="find-commissioner">Find</a>
+    <a id="find-commissioner">Find</a>
   </div>
-</div>
 -->
 
-<!-- Input form using half Javascript, half Ruby
+
+ <!-- Input form using half Javascript, half Ruby -->
 <form>
-      <input type="text" id="user-commissioner">
-      <button class="js-form-submit" type="submit">SUBMIT</button>
+      <input type="text">
+      <button type="submit">SUBMIT</button>
 </form>
--->
 
-<!-- Input form using Ruby -->
+<!-- Something copied to use onsubmit event
+ <form onsubmit="function()">
+  Enter address: <input type="text">
+  <input type="submit">
+</form> -->
+
+
+<!-- Input form using Ruby 
 <div class="container">
   <%= form_tag("search", method: "post") do %>
   <%= label_tag(:user_address, "Enter your address:") %>
   <%= text_field_tag(:user_address) %>
   <%= submit_tag("Search") %>
 <% end %>
-</div>
+</div> -->
 
 <!-- Form modal, pops up with candidates address -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Find</button>
@@ -47,6 +53,8 @@
   </div>
 </div>
  
+ 
+
 <!-- Bottom info portion -->
 <div class="container">
   <div class="row">

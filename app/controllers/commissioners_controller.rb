@@ -12,6 +12,6 @@ class CommissionersController < ApplicationController
 		user_address.inspect
 
 		# Use JS to find commissioner
-		redirect_to :show
+		redirect_to show(:district_id)
 	end
 end
