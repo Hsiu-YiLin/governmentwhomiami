@@ -7,10 +7,9 @@ var commissionerRequest = "https://gisweb.miamidade.gov/ArcGIS/rest/services/Com
 var selectedAddressToCall = null;
 var spatialReference = null;
 
-$('#js-form-submit').on('submit', function(){
-	console.log('Submitted');
-
-});
+// $('#js-form-submit').on('submit', function(){
+// 	console.log('Submitted');
+// });
 
 $(function() {
 	var availableTags = [];
@@ -51,20 +50,21 @@ $(function() {
         });
 	});
 
-
-
-
 	$( "#find-commissioner" ).click(function() {
 		
 	// console.log(commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid));
 
 	$.get( commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid)
                        , function(data) {
-        var comissioner = JSON.parse(data);
-
+	        var comissioner = JSON.parse(data);
         
-       	alert ("You live in district " + comissioner.features[0].attributes.ID + ". Your comissioner is " +  comissioner.features[0].attributes.COMMNAME)
+	       	// alert ("You live in district " + comissioner.features[0].attributes.ID + ". Your comissioner is " +  comissioner.features[0].attributes.COMMNAME)
+	       	commID=comissioner.features[0].attributes.ID;
+	       	pageRedirect(commID); 
+	       	
     	});
+
+	
 
 	var commissionerUrl = `/commissioners/7`;
 
@@ -73,4 +73,8 @@ $(function() {
 			See commissioner's profile
 		</a>`;
 	});
+
+	function pageRedirect(commissioner_id){
+		window.location="commissioners/"+commissioner_id;
+	}
 });

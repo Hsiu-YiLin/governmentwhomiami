@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
-	def show
-		render :home
+	def home
+		@commissionerHere = Commissioner.find_by(district_id: 1)
 	end
 
 end

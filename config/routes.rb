@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'site#home'
   get  '/about' => 'site#about'
   post '/search' => 'commissioners#search'
-  get  '/show' => 'commissioners#show'
+  get  '/commissioners/:district_id' => 'commissioners#show'
 
   # Prepare routes for commissioner
 

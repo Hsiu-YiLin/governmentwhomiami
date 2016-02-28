@@ -8,31 +8,23 @@
   </div>
 </div>
 
-<!--  Input form using Javascript
+  <!-- Input form using Javascript -->
 
-  <div>
+  <div class="container">
     <input id="find-user-area">
     <a id="find-commissioner">Find</a>
   </div>
--->
-
 
  <!-- Input form using half Javascript, half Ruby -->
-<form>
+<!-- <form>
       <input type="text">
       <button type="submit">SUBMIT</button>
 </form>
+ -->
 
-<!-- Something copied to use onsubmit event
- <form onsubmit="function()">
-  Enter address: <input type="text">
-  <input type="submit">
-</form> -->
-
-
-<!-- Input form using Ruby 
-<div class="container">
-  <%= form_tag("search", method: "post") do %>
+<!-- Input form using Ruby  -->
+<!-- <div class="container">
+  <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:user_address, "Enter your address:") %>
   <%= text_field_tag(:user_address) %>
   <%= submit_tag("Search") %>
@@ -40,7 +32,7 @@
 </div> -->
 
 <!-- Form modal, pops up with candidates address -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Find</button>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Find</button> -->
 <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
   <div class="modal-dialog modal-sm">
 
@@ -53,8 +45,6 @@
   </div>
 </div>
  
- 
-
 <!-- Bottom info portion -->
 <div class="container">
   <div class="row">
