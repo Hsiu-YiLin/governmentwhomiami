@@ -1,18 +1,47 @@
+<!-- FB THING -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- Commissioner Bio Info  -->
 <div class="container">
-
-<h1>Here's your commissioner</h1>
-<hr>
-<%= @commissioner.name %>
+	
+	<div class="row">
+	<h1>Here's your commissioner</h1>
+	</div>
+	
+	
+	<div class="row">
+		<h3><%= @commissioner.name %></h3>
+		<h4>District <%=@commID%> </h4>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+		<!-- <img src="/assets/images/commissioners/<%=  %>.jpg"> -->
+		<%= image_tag(@commPicURL, :height => "300", alt: "Commissioner Portrait", class: "img-circle") %>
+	</div>
+	<div class="col-md-4">
+		
+		District Phone:<a href="tel:<%=@commissioner.phone%>"> <%=@commissioner.phone%></a><br>
+		Email: <a href="mailto: <%=@commissioner.email%>"> <%= @commissioner.email %> </a> <br>
+		<a href="<%= @commissioner.url %>" target="_blank"> Official website </a>
+	</div>
 </div>
 
-
-
-<!-- <img src="/assets/images/commissioners/<%=  %>.jpg"> -->
+<!-- Read from file Commissioner About Me -->
 <div class="container">
+<h4> About Commissioner <%= @commissioner.name %> </h4>
+<p><%= @commAboutText %></p>
+</div>
 
-	<div class="col-md-4">
-		<%= image_tag(@commPicURL) %>
-	</div>
-	</div>
+<!-- Social Media Stuff -->
+<div class="container">
+<div class="col-md-6">
+<div class="fb-page" data-href="https://www.facebook.com/Commissioner-Barbara-J-Jordan-174104939303656/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
+
+</div>
 </div>
