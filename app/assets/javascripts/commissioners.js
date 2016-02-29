@@ -10,7 +10,6 @@ var spatialReference = null;
 // $('#js-form-submit').on('submit', function(){
 // 	console.log('Submitted');
 // });
-
 $(function() {
 	var availableTags = [];
     var response = null;
@@ -63,15 +62,12 @@ $(function() {
 	       	pageRedirect(commID); 
 	       	
     	});
+	// var commissionerUrl = `/commissioners/7`;
 
-	
-
-	var commissionerUrl = `/commissioners/7`;
-
-	var html = `
-		<a href="${commissionerUrl}">
-			See commissioner's profile
-		</a>`;
+	// var html = `
+	// 	<a href="${commissionerUrl}">
+	// 		See commissioner's profile
+	// 	</a>`;
 	});
 
 	function pageRedirect(commissioner_id){

@@ -1,6 +1,8 @@
 class CommissionersController < ApplicationController
 	def show
 		@commissioner = Commissioner.find_by(district_id: params[:district_id])
+		@commID = @commissioner.district_id
+		@commPicURL = "commissioners/#{@commID}.jpg"
 	end
 
 	def search
