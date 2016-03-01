@@ -3,7 +3,7 @@ class CommissionersController < ApplicationController
 		@commissioner = Commissioner.find_by(district_id: params[:district_id])
 		@commID = @commissioner.district_id
 		@commPicURL = "commissioners/#{@commID}.jpg"
-		@commAboutText = File.read("app/assets/abouttxt/#{@commID}.txt")
+		@commAboutText = File.read("app/assets/abouttxt/#{@commID}.txt").html_safe
 		# IO.binread("#{@commID}.txt")
 	end
 

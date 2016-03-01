@@ -7,13 +7,14 @@ var commissionerRequest = "https://gisweb.miamidade.gov/ArcGIS/rest/services/Com
 var selectedAddressToCall = null;
 var spatialReference = null;
 
-// $('#js-form-submit').on('submit', function(){
-// 	console.log('Submitted');
-// });
 $(function() {
 	var availableTags = [];
     var response = null;
     $( "#find-user-area" ).keyup(function() {
+	});
+
+	$( "#find-commissioner" ).click(function() {
+
 
     	// Using AJAX to request user address
     // 	$.ajax({ 
@@ -46,14 +47,7 @@ $(function() {
 				selectedAddressToCall = response.candidates[0];
                 spatialReference = response.spatialReference;
             }
-        });
-	});
-
-	$( "#find-commissioner" ).click(function() {
-		
-	// console.log(commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid));
-
-	$.get( commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid)
+           $.get( commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid)
                        , function(data) {
 	        var comissioner = JSON.parse(data);
         
@@ -61,7 +55,13 @@ $(function() {
 	       	commID=comissioner.features[0].attributes.ID;
 	       	pageRedirect(commID); 
 	       	
-    	});
+    	}); 
+
+        });
+		
+	// console.log(commissionerRequest.replace("{{X}}", selectedAddressToCall.location.x).replace("{{Y}}", selectedAddressToCall.location.y).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid).replace("{{wkid}}", spatialReference.wkid). replace("{{latestWkid}}", spatialReference.latestWkid));
+
+	
 	// var commissionerUrl = `/commissioners/7`;
 
 	// var html = `

@@ -9,9 +9,12 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+ *= require agency
  *= require bootstrap.min
+
  *= require_tree .
  *= require_self
+
  */
 
 @font-face {
@@ -23,7 +26,3 @@
        url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}

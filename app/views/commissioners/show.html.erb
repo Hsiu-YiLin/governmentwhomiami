@@ -40,8 +40,16 @@
 
 <!-- Social Media Stuff -->
 <div class="container">
-<div class="col-md-6">
-<div class="fb-page" data-href="https://www.facebook.com/Commissioner-Barbara-J-Jordan-174104939303656/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div>
+<h4> Social Media for Commissioner <%= @commissioner.name %> </h4>
+	
 
-</div>
+	<div class="col-md-6"> 
+		<div class="fb-page" data-href="https://www.facebook.com/<%=@commissioner.facebook %>/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"></div> 
+	</div>
+	
+	<div class="col-md-6">
+	            <a class="twitter-timeline"  href="https://twitter.com/<%= @commissionorjeanmonestime%>" data-widget-id="704243877486710784">Tweets by @jeanmonestime</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+
 </div>
