@@ -251,17 +251,7 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-/*header {
-    background-repeat: none;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    text-align: center;
-    color: #fff
-}*/
+
 
 header .intro-text {
     padding-top: 100px;

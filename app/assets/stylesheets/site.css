@@ -1,5 +1,6 @@
 header {
-    background-repeat: url(image-url('header-bg.jpg'));
+    background-image: url("header-bg.jpg");
+    background-repeat: none;
     background-attachment: scroll;
     background-position: center center;
     -webkit-background-size: cover;
@@ -7,5 +8,9 @@ header {
     background-size: cover;
     -o-background-size: cover;
     text-align: center;
-    color: #fff
+    color: #fff;
+}
+
+#find-user-area {
+	width:50%;
 }
