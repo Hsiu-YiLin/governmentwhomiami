@@ -11,7 +11,7 @@
  * file per style scope.
  *= require agency
  *= require bootstrap.min
- 
+ *= require font-awesome
  *= require_tree .
  *= require_self
 
